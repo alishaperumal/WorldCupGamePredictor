@@ -1,0 +1,37 @@
+{
+  "accuracy": 0.4475,
+  "log_loss": 1.0521,
+  "cv_mean": 0.4406,
+  "cv_std": 0.0224,
+  "n_train": 1600,
+  "n_test": 400,
+  "confusion_matrix": [
+    [
+      87,
+      32,
+      34
+    ],
+    [
+      42,
+      47,
+      38
+    ],
+    [
+      43,
+      32,
+      45
+    ]
+  ],
+  "feature_importance": {
+    "rank_diff": 0.1402859787612865,
+    "home_form_win_rate": 0.050593483579184986,
+    "away_form_win_rate": 0.04346899912337272,
+    "home_form_goal_rate": 0.07552976340728867,
+    "away_form_goal_rate": 0.08382881889010281,
+    "home_form_concede": 0.07137892223128058,
+    "away_form_concede": 0.07758595965450406,
+    "h2h_home_win_rate": 0.39426873716416566,
+    "tournament_weight": 0.04772345533300444,
+    "is_neutral": 0.01533588185580958
+  }
+}
