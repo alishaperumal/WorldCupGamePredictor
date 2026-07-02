@@ -1,3 +1,5 @@
+from unittest import result
+
 import pandas as pd
 import numpy as np
 
@@ -54,8 +56,9 @@ def calculate_team_form(df, n_games=5):
         return group
 
     team_games["team_key"] = team_games["team"]
-    result = team_games.groupby("team_key", group_keys=False).apply(rolling_stats)
-    result["team"] = result["team_key"]
+    team_map = team_games["team_key"].copy()
+    result = team_games.groupby("team_key", group_keys=False).apply(rolling_stats, include_groups=False)
+    result["team"] = team_map.values
     return result.reset_index(drop=True)
 
 
